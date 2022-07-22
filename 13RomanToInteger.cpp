@@ -286,3 +286,56 @@ public:
 };
 
 */
+
+/* less memory - 5800KB  and less time 10 ms
+
+class Solution {
+public:
+    int convert(char str)
+    {
+        if(str=='I')
+        {
+            return 1;
+        }
+        else if(str=='V')
+        {
+            return 5;
+        }
+        else if(str=='X')
+        {
+            return 10;
+        }
+        else if(str=='L')
+        {
+            return 50;
+        }
+       else if(str=='C')
+        {
+            return 100;
+        }
+        else if(str=='D')
+        {
+            return 500;
+        }
+        return 1000;
+    }
+    int romanToInt(string s) {
+        int n=s.length();
+        int ans=convert(s[n-1]);
+        int i=n-2;
+        while(i>=0)
+        {
+            if(convert(s[i])<convert(s[i+1]))
+            {
+                ans-=convert(s[i]);
+            }
+            else{
+                ans+=convert(s[i]);
+            }
+            i--;
+        }
+        return ans;
+    }
+};
+*/
+
